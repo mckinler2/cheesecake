@@ -1,0 +1,90 @@
+<!--Rhiannon McKinley-->
+<!DOCTYPE html>
+<html>
+   <head>
+      <!--links to css sheet and google fonts-->
+      <link rel="stylesheet" href="/stylesheets/mckinler26.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?
+family=Sofia|Delius">
+      <!--jQuery library-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/> 
+</script>
+<script src="/javascripts/script.js"/> 
+</script>
+
+   </head>
+   <body>
+      <h1>Cheesecake Order Form</h1>
+      <!--picture of cheesecake-->
+      <div id = "img"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="Cheesecake" width="155" height="155"></div>
+      <!--quantity/topping table-->
+      <table id = "options" style="width:10%">
+         <tr>
+            <td>Quantity</td>
+            <td>Topping</td>
+         </tr>
+         <td>
+            <!--quantity drop down menu-->
+            <select name="quantity" id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+         </td>
+         <td>
+            <!--buttons for topping selection-->
+            <form id="toppings_form">
+               <input type="radio" name = "option" id="plain" value="Plain">
+               <label for="plain">Plain</label><br>
+               <input type="radio" name = "option" id="cherry" value="Cherry">
+               <label for="cherry">Cherry</label><br>
+               <input type="radio" name = "option" id="chocolate" value="Chocolate">
+               <label for="chocolate">Chocolate</label><br>
+         </td>
+         </form>
+      </table>
+      <!--box for notes-->
+      <div id = "notes_div"> 
+         <label for="notes" id="notes_label">Notes:</label>
+         <br>
+         <textarea id="notes" rows="4" cols="40" placeholder="Enter any special instructions here."></textarea>
+      </div>
+      <br>
+      <!--order button-->
+      <input type="submit" value="Order" id="order">
+      </form>
+      <p id="summary"></p>
+      <!--total orders counter-->
+      <div class="flex-container">
+         <div id="orders_for">
+         </div>
+         <!--month drop down menu-->
+         <!--source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_hover-->
+         <h3>Orders For</h3>
+         <div class="dropdown">
+            <button class="dropbtn" id="dropbtn">Month</button>
+            <div class="dropdown-content">
+               <div onclick="clicked()" id="Jan">Jan</div>
+               <div onclick="clicked()"id="Feb">Feb</div>
+               <div onclick="clicked()">Mar</div>
+               <div onclick="clicked()">Apr</div>
+               <div onclick="clicked()">May</div>
+               <div onclick="clicked()">Jun</div>
+               <div onclick="clicked()">Jul</div>
+               <div onclick="clicked()">Aug</div>
+               <div onclick="clicked()">Sep</div>
+               <div onclick="clicked()">Oct</div>
+               <div onclick="clicked()">Nov</div>
+               <div onclick="clicked()">Dec</div>
+            </div>
+         </div>
+      </div>
+      </tr>
+      <ul>
+         <li>11 cherry</li>
+         <li>17 chocolate</li>
+         <li>31 plain</li>
+      </ul>
+   </body>
+</html>
